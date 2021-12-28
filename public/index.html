@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>slice of life</title>
+</head>
+<body>
+    <main>
+        <form id = register>
+            <h1>Register</h1>
+            <input type='text' id="register-username" placeholder="Username"/>
+            <input type='text' id="register-email" placeholder='Email'/>
+            <input type='text' id="register-firstName" placeholder='First Name'/>
+            <input type='text' id="register-lastName" placeholder='Last Name'/>
+            <input type='password' id="register-password" placeholder='Password'/>
+            <input type='password' id="register-password-2" placeholder='Confirm Password'/>
+            <button id = "regBtn">Register</button>
+        </form>
+        <form id = login action="home.html">
+            <h1>Let's get started</h1>
+            <input type="text" id = login-username placeholder = Username>
+            <input type="password" id = login-password placeholder = Password>
+            <!-- <a href="/home">
+                <button id = "loginBtn">Sign In</button>
+            </a> -->
+            <input type="submit" onclick="window.location.href = '/home';" value = Login>
+        </form>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src = "/js"></script>
+</body>
+</html>
