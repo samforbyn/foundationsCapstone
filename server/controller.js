@@ -1,7 +1,16 @@
 const users = []
+const allStories = require("./db.json")
 const bcrypt = require("bcryptjs")
-
+let storyId = 1
 module.exports = {
+    postStory: (req, res) => {
+        req.body.story_id = storyId
+        console.log(req.body)
+        allStories.push(req.body)
+        console.log(allStories)
+        storyId++
+    },
+
     login: (req, res) => {
         console.log("Logging in...")
         console.log(req.body)
@@ -11,7 +20,7 @@ module.exports = {
             if(users[i].username === username){
                 if(existingUser){
                     let userReturn = {...users[i]}
-                    delete userReturn.pwHashrs
+                    console.log(userReturn)
                     // res.status(200).send(userReturn)
                 }
             }else{
