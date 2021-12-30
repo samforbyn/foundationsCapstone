@@ -48,9 +48,12 @@ function registerFunction(e) {
     let password = document.querySelector('#register-password')
     let password2 = document.querySelector('#register-password-2')
 
+
+    if(username.value === ''|| email.value === '' || firstName.value === '' || lastName.value === '' || password.value === '' || password2.value === ''){
+        alert("All fields must be filled")
+    }
     if(password.value !== password2.value){
         alert("Your passwords need to match!")
-        return
     }
 
     let bodyObject = {
@@ -61,7 +64,10 @@ function registerFunction(e) {
         password: password.value
     }
     console.log(bodyObject)
+
     register(bodyObject)
+
+    
 
     username.value = ''
     email.value = ''

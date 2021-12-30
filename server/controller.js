@@ -1,5 +1,5 @@
 const users = []
-const allStories = require("./db.json")
+const allStories = require("./storyDb.json")
 const bcrypt = require("bcryptjs")
 let storyId = 1
 module.exports = {
@@ -9,6 +9,11 @@ module.exports = {
         allStories.push(req.body)
         console.log(allStories)
         storyId++
+    },
+    
+    loadFeed: (req, res) => {
+        console.log(allStories)
+        res.status(200).send(allStories)
     },
 
     login: (req, res) => {
