@@ -9,6 +9,7 @@ app.use(cors())
 
 
 const {
+    // getPost,
     loadFeed,
     login,
     register,
@@ -33,6 +34,9 @@ app.get('/home', (req, res) => {
 app.get('/homejs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/home.js'))
 })
+app.get('/homeCss', (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/home.css"))
+})
 // STORY
 app.get('/storypage', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/story.html'))
@@ -51,6 +55,7 @@ app.get('/feedjs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/feed.js'))
 })
 
+// app.get('/api/posts/:id', getPost)
 app.get('/api/loadFeed', loadFeed)
 app.post(`/api/login`, login)
 app.post('/api/register', register)

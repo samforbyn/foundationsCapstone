@@ -3,6 +3,10 @@ const allStories = require("./storyDb.json")
 const bcrypt = require("bcryptjs")
 let storyId = 1
 module.exports = {
+    // getPost: (req, res) => {
+        // const {id} = req.params
+        // console.log(id)
+    // },
     postStory: (req, res) => {
         req.body.story_id = storyId
         console.log(req.body)
