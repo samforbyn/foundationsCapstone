@@ -2,17 +2,50 @@ const users = []
 const allStories = require("./storyDb.json")
 const bcrypt = require("bcryptjs")
 let storyId = 1
+let currentStory = 0
 module.exports = {
-    // getPost: (req, res) => {
-        // const {id} = req.params
-        // console.log(id)
-    // },
+
+    fetchStory: (req, res) => {
+        const {id} = req.params
+        for(let i = 0; i < allStories.length ; i++){
+            if(+allStories[i].story_id == +id){
+                const storyNum = allStories[i].story_id
+                const userStory = allStories[i].userStory
+                const postBody = {
+                    number :`<h2>${storyNum}</h2>`,
+                    story: `<h1>${userStory}</h1>`
+                }
+                res.status(200).send(postBody)
+            }
+            }
+
+        // res.status(200).send(currentStory)
+    },
+
+    getPost: (req, res) => {
+        const {id} = req.params
+        for(let i = 0; i < allStories.length ; i++){
+        if(+allStories[i].story_id == +id){
+            const storyNum = allStories[i].story_id
+            const userStory = allStories[i].userStory
+            const postBody = `<h2>${storyNum}</h2> 
+                <h1>${userStory}</h1>`
+                // currentStory.push(postBody)
+                currentStory =
+            res.status(200).send(postBody)
+        }
+        }
+
+    },
     postStory: (req, res) => {
         req.body.story_id = storyId
         console.log(req.body)
         allStories.push(req.body)
         console.log(allStories)
+        res.status(200).send(req.body)
+        currentStory = storyId
         storyId++
+        // console.log(currentStory)
     },
     
     loadFeed: (req, res) => {
@@ -56,6 +89,6 @@ module.exports = {
 
         users.push(userObject)
         // res.send(200).send(userObject)
-        console.log(userObject)
+        console.log(users, "userdb")
     }
 }

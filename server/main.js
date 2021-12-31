@@ -9,7 +9,8 @@ app.use(cors())
 
 
 const {
-    // getPost,
+    fetchStory,
+    getPost,
     loadFeed,
     login,
     register,
@@ -55,7 +56,8 @@ app.get('/feedjs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/feed.js'))
 })
 
-// app.get('/api/posts/:id', getPost)
+app.get(`/api/fetchStory/:id`, fetchStory)
+app.get(`/api/posts/:id`, getPost)
 app.get('/api/loadFeed', loadFeed)
 app.post(`/api/login`, login)
 app.post('/api/register', register)
