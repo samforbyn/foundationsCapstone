@@ -1,6 +1,7 @@
 const storyForm = document.getElementById('storyForm')
 const story = document.getElementById('story')
 const viewBtn = document.getElementById("viewSlice")
+const loadDiv = document.getElementById("loadAfter")
 const baseURL = 'http://localhost:4747/api'
 let post_num = 0
 
@@ -37,7 +38,8 @@ function sendStory(e) {
     // console.log(bodyObject)
     postStory(bodyObject)
     alert("Posted Successfully")
-    viewBtn.classList.remove("hide")
+    loadAfter.classList.remove("hide")
+    loadAfter.classList.add("pos")
     story.value = ''
 
 }

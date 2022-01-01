@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/homeCss">
     <title>slices</title>
@@ -19,11 +22,21 @@
     <main>
         <form id = storyForm>
             <h1>write your slice here:</h1>
-            <input type="text" id = story>
+            <!-- <input type="text" id = story> -->
+            <textarea id="story" cols="30" rows="10"></textarea>
+            <!-- <input type="text" id = story > -->
             <!-- onclick = "location.href = '/storypage';" -->
-            <input type="submit" value = "share your slice" id = shareBtn>
+            <!-- <input type="submit" value = "share your slice" id = shareBtn> -->
+            <button id = shareBtn>share your slice</button>
         </form>
-        <button id = "viewSlice" class = "hide">view your slice</button>
+        <div id=loadAfter class = "hide">
+            <h1 class = glitch>
+                <span aria-hidden="true">thanks for sharing</span>
+                thanks for sharing
+                <span aria-hidden="true">thanks for sharing</span>
+            </h1>
+            <button id = "viewSlice">view your slice</button>
+        </div>
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="/homejs"></script>

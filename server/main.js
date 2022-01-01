@@ -55,6 +55,9 @@ app.get('/feed', (req, res) => {
 app.get('/feedjs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/feed.js'))
 })
+app.get('/feedCss', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/feed.css'))
+})
 
 app.get(`/api/fetchStory/:id`, fetchStory)
 app.get(`/api/posts/:id`, getPost)
