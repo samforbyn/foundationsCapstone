@@ -1,5 +1,7 @@
 const registerForm = document.getElementById("register")
 const loginForm = document.getElementById("login")
+const loginCard = document.getElementById("loginCard")
+const logo = document.getElementById("logo")
 // const regBtn = document.querySelector("#regBtn")
 // const loginBtn = document.querySelector("#loginBtn")
 
@@ -7,19 +9,30 @@ const baseURL = 'http://localhost:4747/api'
 
 const login = body => axios.post(`${baseURL}/login`, body)
     .then(res => {
-        alert('Successful Log In')
+        window.location.href = '/home'
     }).catch(err => {
         console.log(err)
-        alert("no bozos allowed, ya bozo")
+        alert("Invalid - Please try again.")
     })
 
 const register = body => axios.post(`${baseURL}/register`, body)
     .then(res => {
-        alert("Successfully registered")
+        console.log(res.data)
+        console.log(res.data.username)
+        makeLoginCard(res.data)
     }).catch(err => {
         console.log(err)
-        alert("BOZO ALERT, WE HAVE A BOZO ON THE LOOSE")
+        alert("Error registering user")
     })
+    
+    function makeLoginCard(data){
+    logo.style.display = 'none'
+    registerForm.style.display = 'none'
+    let uname = data.username
+    console.log(uname)
+    loginCard.innerHTML = `<h1> Thanks for registering, ${uname}</h1>`
+
+}
 
 function loginFunction(e) {
     e.preventDefault()
@@ -63,7 +76,7 @@ function registerFunction(e) {
         lastName: lastName.value,
         password: password.value
     }
-    console.log(bodyObject)
+    // console.log(bodyObject)
 
     register(bodyObject)
 

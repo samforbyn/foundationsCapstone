@@ -31,7 +31,7 @@ module.exports = {
             const postBody = `<h2>${storyNum}</h2> 
                 <h1>${userStory}</h1>`
                 // currentStory.push(postBody)
-                currentStory =
+                // currentStory =
             res.status(200).send(postBody)
         }
         }
@@ -52,9 +52,8 @@ module.exports = {
         console.log(allStories)
         res.status(200).send(allStories)
     },
-
+    
     login: (req, res) => {
-        console.log("Logging in...")
         console.log(req.body)
         const {username, password} = req.body
         for(let i = 0; i < users.length; i++){
@@ -62,10 +61,15 @@ module.exports = {
             if(users[i].username === username){
                 if(existingUser){
                     let userReturn = {...users[i]}
+                    console.log("Logging in...")
                     console.log(userReturn)
+                    res.redirect('/home')
                     // res.status(200).send(userReturn)
+                }else{
+                    res.status(400).send("Invalid password")
                 }
             }else{
+                console.log("user not found")
                 res.status(400).send("User not found")
             }
         }
@@ -88,7 +92,7 @@ module.exports = {
         }
 
         users.push(userObject)
-        // res.send(200).send(userObject)
+        res.status(200).send(userObject)
         console.log(users, "userdb")
     }
 }

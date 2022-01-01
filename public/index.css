@@ -3,7 +3,45 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: linear-gradient(to right, rgb(47, 47, 70), rgb(91, 91, 105));
 
+}
+#regBtn,
+    #loginBtn {
+        width: 4rem;
+        border-radius: 6px;
+        font-family: bahnschrift light;
+    }
+#regBtn{
+    width: 5rem;
+}
+i{
+    padding-right: .5rem;
+}
+#regBtn:hover,
+    #loginBtn:hover {
+        cursor: pointer;
+    }
+input,
+    #regBtn,
+    #loginBtn{
+    font-family: bahnschrift light;
+    border: 0;
+    border-bottom: 2px solid rgb(31, 31, 37);
+    line-height: 1.7rem;
+    margin-bottom: .5em;
+    box-shadow: 3px 1px rgb(26, 25, 25);
+}
+h3, 
+    h1{
+    font-size: 500%;
+    font-family: 'The Nautigal', cursive;
+}
+h1{
+    font-size: 330%;
+    color: white;
+}
 #register,
     #login,
         main{
@@ -15,10 +53,45 @@
 
 #register,
     #login{
-        line-height: 4rem;
+        line-height: 5rem;
     }
 
 main{
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
+.glitch {
+    font-size: 8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+  
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  
+    animation: glitch 500ms infinite;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch span:first-child {
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.025em, -0.0125em);
+    /* color: green; */
+    opacity: 0.8;
+  }
+  
+  .glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+    transform: translate(0.0125em, 0.025em);
+    /* color: red; */
+    opacity: 0.8;
+  }
+  

@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/homeCss">
-    <title>slice of life</title>
+    <title>slices</title>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="/home">write a slice</a></li>
-            <li><a href="/feed">view all slices</a></li>
+            <li><a href="/"><i class="fas fa-arrow-circle-left"></i>login</a></li>
+            <li><a href="/home"><i class="fas fa-edit"></i>write</a></li>
+            <li><a href="/feed"><i class="fas fa-stream"></i>view all</a></li>
         </ul>
     </nav>
     <main>
         <form id = storyForm>
-            <h1>write your story here:</h1>
+            <h1>write your slice here:</h1>
             <input type="text" id = story>
             <!-- onclick = "location.href = '/storypage';" -->
             <input type="submit" value = "share your slice" id = shareBtn>

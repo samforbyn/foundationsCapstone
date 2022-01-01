@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css">
     <!-- <link rel="stylesheet" href="index.css"> -->
-    <title>slice of life</title>
+    <title>slices</title>
 </head>
 <body>
     <main>
+        <div id = loginCard></div>
+        <h3  id = logo class="glitch">
+            <span aria-hidden="true">slices</span>
+            slices
+            <span aria-hidden="true">slices</span>
+          </h3>
         <form id = register>
             <h1>Register</h1>
             <input type='text' id="register-username" placeholder="Username"/>
@@ -18,16 +28,17 @@
             <input type='text' id="register-lastName" placeholder='Last Name'/>
             <input type='password' id="register-password" placeholder='Password'/>
             <input type='password' id="register-password-2" placeholder='Confirm Password'/>
-            <button id = "regBtn">Register</button>
+            <button id = "regBtn"><i class="fas fa-user-plus"></i>Register</button>
         </form>
         <form id = login action="home.html">
-            <h1>Let's get started</h1>
+            <h1>Login</h1>
             <input type="text" id = login-username placeholder = Username>
             <input type="password" id = login-password placeholder = Password>
             <!-- <a href="/home">
                 <button id = "loginBtn">Sign In</button>
             </a> -->
-            <input type="submit";" value = Login>
+            <!-- <input id = loginBtn type="submit";" value = Login> -->
+            <button id = loginBtn><i class="fas fa-sign-in-alt"></i>Login</button>
         </form>
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
