@@ -5,6 +5,10 @@ const loadDiv = document.getElementById("loadAfter")
 const baseURL = 'http://localhost:4747/api'
 let post_num = 0
 
+window.onload = function() {
+    story.focus()
+}
+
 const postStory = body => axios.post(`${baseURL}/postStory`, body)
     .then(res => {
         console.log(res.data)
@@ -40,6 +44,7 @@ function sendStory(e) {
     alert("Posted Successfully")
     loadAfter.classList.remove("hide")
     loadAfter.classList.add("pos")
+    storyForm.style.display = "none"
     story.value = ''
 
 }

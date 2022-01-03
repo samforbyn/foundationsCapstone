@@ -45,6 +45,9 @@ app.get('/storypage', (req, res) => {
 app.get('/storyjs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/storyjs.js'))
 })
+app.get('/storyCss', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/story.css'))
+})
 app.get('/qrcode', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/qrcode.js'))
 })

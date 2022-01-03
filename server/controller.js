@@ -12,7 +12,7 @@ module.exports = {
                 const storyNum = allStories[i].story_id
                 const userStory = allStories[i].userStory
                 const postBody = {
-                    number :`<h2>${storyNum}</h2>`,
+                    number :`<h2>#${storyNum}</h2>`,
                     story: `<h1>${userStory}</h1>`
                 }
                 res.status(200).send(postBody)
@@ -66,7 +66,7 @@ module.exports = {
                     res.redirect('/home')
                     // res.status(200).send(userReturn)
                 }else{
-                    res.status(400).send("Invalid password")
+                    // res.status(400).send("Invalid password")
                 }
             }else{
                 console.log("user not found")

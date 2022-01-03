@@ -39,6 +39,7 @@ const baseURL = 'http://localhost:4747/api'
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
         })
+        qrBtn.style.display = 'none'
     })
  
 window.onload = fetchStory
