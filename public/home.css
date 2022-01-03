@@ -35,6 +35,9 @@ a,
     font-family: bahnschrift light;
     color:rgb(195, 215, 245)
 }
+a:hover{
+    font-size: 17px;
+}
 ul{
     width: 100vw;
     display: flex;
@@ -60,7 +63,9 @@ button{
 }
 button:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
+
 #storyForm{
     height: 60vh;
     display: flex;

@@ -51,6 +51,7 @@ main{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    width: 40rem;
 }
 button{
     height: 3.5vh;

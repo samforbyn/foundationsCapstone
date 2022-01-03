@@ -43,7 +43,7 @@ a,
 }
 .user-card{
     width: 40vw;
-    background-color:rgb(90, 90, 102) ;
+    background-color:rgb(102, 102, 116);
     margin-top: 1rem;
     padding: .5rem;
     color: rgb(195, 215, 245);
@@ -65,8 +65,12 @@ button{
 }
 button:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
 section{
     position: relative;
 
+}
+a:hover{
+    font-size: 17px;
 }

@@ -26,7 +26,7 @@ function createFeedCard(data) {
         
         
         userCard.innerHTML = `<p class="storyID">slice number: ${data[i].story_id}</p>
-        <p class="uStory">slice:<br>${data[i].userStory}</p>
+        <p class="uStory"><br>${data[i].userStory}</p>
         <button id = ${data[i].story_id} onClick= getID(${data[i].story_id})>view slice</button>
         `
         

@@ -4,7 +4,7 @@ const loginCard = document.getElementById("loginCard")
 const logo = document.getElementById("logo")
 // const regBtn = document.querySelector("#regBtn")
 // const loginBtn = document.querySelector("#loginBtn")
-
+let hasRegistered = false
 const baseURL = 'http://localhost:4747/api'
 
 const login = body => axios.post(`${baseURL}/login`, body)
@@ -17,6 +17,7 @@ const login = body => axios.post(`${baseURL}/login`, body)
 
 const register = body => axios.post(`${baseURL}/register`, body)
     .then(res => {
+        hasRegistered = true
         console.log(res.data)
         console.log(res.data.username)
         makeLoginCard(res.data)
@@ -30,7 +31,7 @@ const register = body => axios.post(`${baseURL}/register`, body)
     registerForm.style.display = 'none'
     let uname = data.username
     console.log(uname)
-    loginCard.innerHTML = `<h1> Thanks for registering, ${uname}</h1>`
+    loginCard.innerHTML = `<h1> Thanks for registering, ${uname}!</h1>`
 
 }
 
@@ -43,8 +44,13 @@ function loginFunction(e) {
         username: username.value,
         password: password.value
     }
-
-    login(bodyObject)
+    if(username.value === '' || password.value === ''){
+        alert("No username or password entered.")
+    }else if(hasRegistered === false){
+        alert("Please register first!")
+    }else{
+        login(bodyObject)
+    }
   
 
     username.value = ''
