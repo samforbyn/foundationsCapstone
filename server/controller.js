@@ -1,4 +1,4 @@
-const users = []
+const users = require("./usersDb.json")
 const allStories = require("./storyDb.json")
 const bcrypt = require("bcryptjs")
 let storyId = 1
