@@ -7,6 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const port = process.env.PORT || 4747
 
 const {
     fetchStory,
@@ -69,4 +70,4 @@ app.post(`/api/login`, login)
 app.post('/api/register', register)
 app.post('/api/postStory', postStory)
 
-app.listen(4747, () => console.log("i have a crush on port 4747"))
+app.listen(port, () => console.log("i have a crush on port 4747"))
