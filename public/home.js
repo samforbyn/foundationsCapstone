@@ -3,9 +3,11 @@ const story = document.getElementById('story')
 const viewBtn = document.getElementById("viewSlice")
 const loadDiv = document.getElementById("loadAfter")
 const baseURL = 'http://localhost:4747/api'
+const welcomeUser = document.getElementById("welcome")
 let post_num = 0
 
 window.onload = function() {
+    welcomeUser.innerHTML = ` Welcome, ${window.localStorage.getItem("thisUser")}`
     story.focus()
 }
 

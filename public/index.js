@@ -40,6 +40,8 @@ function loginFunction(e) {
     let username = document.getElementById("login-username")
     let password = document.getElementById("login-password")
     
+    window.localStorage.setItem("thisUser", username.value )
+
     let bodyObject = {
         username: username.value,
         password: password.value

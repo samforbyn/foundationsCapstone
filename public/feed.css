@@ -17,6 +17,7 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    height: 70vh;
 }
 nav{
     margin-top: 1rem;
@@ -43,8 +44,9 @@ a,
 }
 .user-card{
     width: 40vw;
-    background-color:rgb(102, 102, 116);
+    background-color:rgb(91, 91, 105);
     margin-top: 1rem;
+    margin-bottom: 2rem;
     padding: .5rem;
     color: rgb(195, 215, 245);
     display: flex;

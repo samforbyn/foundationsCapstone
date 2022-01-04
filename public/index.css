@@ -124,3 +124,7 @@ main{
   #loginCard > h1 {
       font-size: 5rem;
   }
+  #copyright{
+      font-family: bahnschrift light;
+      font-size: 2rem;
+  }
