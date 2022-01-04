@@ -6,11 +6,13 @@
 .hide{
     display: none;
 }
+
 body{
     background: linear-gradient(to right, rgb(47, 47, 70), rgb(91, 91, 105));
     height: 100vh;
     display: flex; 
     flex-direction: column;
+    justify-content: space-evenly;
 }
 #regBtn,
     #loginBtn {
@@ -73,9 +75,13 @@ h1{
     }
 
 main{
+    margin-top: 3rem;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    right: 13.5%;
+
 }
 .glitch {
     font-size: 8rem;
